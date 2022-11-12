@@ -28,7 +28,7 @@ if __name__ == "__main__":
 
     with open("configDB.json", "r") as settingsDB:
         _configDB = json.loads(settingsDB.read())
-        _configDB["password"] = "ghjrjamtd"
+        _configDB["password"] = ""
 
     app = QtWidgets.QApplication(sys.argv)
     MainWindow = QtWidgets.QMainWindow()
