@@ -7,16 +7,15 @@
 
 
 from PyQt6 import QtCore, QtGui, QtWidgets
-from FuncWind import Ui_FuncWind
+from FuncWindNew import Ui_FuncWind
 
 class Ui_MainWindow(object):
 
-    def openFuncWind(self, conn):
+    def openFuncWind(self, _configDB):
         self.window = QtWidgets.QMainWindow()
         self.ui = Ui_FuncWind()
-        self.ui.setupUi(self.window)
-        self.ui.UpdateTable("select * from main_view", conn)
-
+        self.ui.setupUi(self.window, _configDB)
+        self.ui.UpdateTables(self.CreateDBConnection(_configDB))
         self.window.show()
 
 
@@ -64,7 +63,7 @@ class Ui_MainWindow(object):
         self.label.setGeometry(QtCore.QRect(196, 22, 851, 611))
         self.label.setObjectName("label")
         self.AddNote = QtWidgets.QPushButton(self.centralwidget,
-                                             clicked=lambda: self.openFuncWind(self.CreateDBConnection(_configDB)))
+                                             clicked=lambda: self.openFuncWind(_configDB))
         self.AddNote.setGeometry(QtCore.QRect(10, 570, 171, 51))
         font = QtGui.QFont()
         font.setPointSize(-1)
