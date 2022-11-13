@@ -25,13 +25,3 @@ class Ui_OpenFile(object):
     def retranslateUi(self, OpenFile):
         _translate = QtCore.QCoreApplication.translate
         OpenFile.setWindowTitle(_translate("OpenFile", "OpenFileWind"))
-
-
-"""if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    OpenFile = QtWidgets.QMainWindow()
-    ui = Ui_OpenFile()
-    ui.setupUi(OpenFile)
-    OpenFile.show()
-    sys.exit(app.exec())"""
