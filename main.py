@@ -6,7 +6,7 @@ import psycopg2
 from PRCVI import *
 
 
-def CreateDBConnection(config):
+"""def CreateDBConnection(config):
     try:
         conn = psycopg2.connect(database=config["database"], user=config["user"],
                                 password=config["password"], host=config["host"], port=int(config["port"]))
@@ -14,7 +14,7 @@ def CreateDBConnection(config):
         print("[INFO] Connection to the database was successful!")
         return conn
     except Exception as _ex:
-        print(f"[INFO] Error while connection with PostgreSQL - {_ex}")
+        print(f"[INFO] Error while connection with PostgreSQL - {_ex}")"""
 
 
 if __name__ == "__main__":

@@ -153,6 +153,7 @@ class Ui_FuncWind(object):
 
     def OpenDeleteDialog(self, path, mode):
         dlg = QMessageBox()
+        dlg.setWindowIcon(QtGui.QIcon("icons/logo_vert.png"))
         dlg.setIcon(QMessageBox.Icon.Question)
         dlg.addButton(QMessageBox.StandardButton.Cancel)
         dlg.addButton(QMessageBox.StandardButton.Apply)
